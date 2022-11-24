@@ -62,7 +62,7 @@ class FreeplayState extends MusicBeatState
 		#if MODS_ALLOWED
 		Paths.destroyLoadedImages();
 		#end
-		WeekData.reloadWeekFiles(curType,true);
+		WeekData.reloadWeekFiles(curType,false,true);
 		#if desktop
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("In the Menus", null);

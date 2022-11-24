@@ -77,13 +77,13 @@ class WeekData {
 		pokehellWeek = weekFile.pokehellWeek;
 	}
 
-	public static function reloadWeekFiles(leType:Null<String> = 'default', isStoryMode:Null<Bool> = false)
+	public static function reloadWeekFiles(leType:Null<String> = 'default', isStoryMode:Null<Bool> = false, ?isFreeplay = false)
 	{
 		weeksList = [];
 		weeksLoaded.clear();
 		#if MODS_ALLOWED
 			var directories:Array<String>;
-		if (leType == 'default' && isStoryMode == true){
+		if (leType == 'default' && (isStoryMode == true||isFreeplay == true)){
 			directories = [Paths.mods(), Paths.getPreloadPath()];
 		}else if (leType == 'default'){
 			directories = [Paths.mods()];
