@@ -1867,7 +1867,7 @@ class PlayState extends MusicBeatState
 		kadeEngineWatermark = new FlxText(4, healthBarBG.y
 			+ 50, 0,
 			SONG.song
-			+ ' | ' + storyDifficultyText  , 16);
+			+ ' | ' + CoolUtil.difficultyStuff[storyDifficulty][0]  , 16);
 		kadeEngineWatermark.setFormat(Paths.font("righteous.ttf"), 16, uiColor, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		kadeEngineWatermark.scrollFactor.set();
 		kadeEngineWatermark.updateHitbox();
